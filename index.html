@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+
+      <!--   Nav bar on top right corner  -->
+        <div class="nav-bar">
+
+            <div class="nav-gmail nav-child"><a href="https://mail.google.com/">Gmail</a></div>
+            <div class="nav-images nav-child"><a href="#">Images</a></div>
+            <div class="G-apps-logo nav-child"><a href="#"><img src="images/apps.png" alt=""></a></div>
+            <div class="gmail-dp nav-child"><a href="#"><div class="dp-image">
+                <img src="images/user.jpeg" alt="" height="100%" width="100%">
+            </div></a></div>
+
+       
+        </div>
+
+        <!-- Main search engine  -->
+
+        <div class="body-frontPage">
+          <div class="logo-searchEngine">
+            <!-- google logo -->
+            <div class="logo">
+                <img class="g-logo" src="images/social.png" alt="" >
+            </div>
+            <!-- Search bar // input button -->
+            <div class="searchbar">
+
+                <div class="searchbarc-container"><span class="searchbar-voiceSearch"><img src="images/google-voice.png" alt=""></span>
+                     <input class="initial-hide" type="text" placeholder="Search google " id="searchInput" onkeydown="checkEnter(event)">
+                      <span class="searchbar-voiceSearch "><img src="images/search.png" alt="" onclick="searchGoogle()"></span></div>
+               
+            </div>
+            <!-- quick links icons  -->
+
+        <div class="quick-link-container-animation initial-hide">
+            <div class="quick-links ">
+                <div class="quick-link-1 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://www.google.com/chrome/"><img src="images/google-maps.png" alt=""></a></div>
+                 
+                 <span>chrome</span>
+                </div>
+                <div class="quick-link-2 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://www.youtube.com/"><img src="images/youtube.png" alt=""></a></div>
+                 <span >YouTube</span>
+                </div>
+                <div class="quick-link-3 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://www.amazon.in/"><img src="images/Amazon.png" alt=""></a></div>
+                 <span>Amazon</span>
+                </div>
+                <div class="quick-link-4 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://open.spotify.com/"><img src="images/spotify.png" alt=""></a></div>
+                 <span>Spotify</span>
+                </div>
+                <div class="quick-link-5 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://web.whatsapp.com/"><img src="images/whatsapp.png" alt=""></a></div>
+                 <span>Whatsapp</span>
+                </div>
+                <div class="quick-link-6 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt=""></a></div>
+                 <span>Linkedin</span>
+                </div>
+                <div class="quick-link-7 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://meet.google.com/"><img src="images/meet.png" alt=""></a></div>
+                 <span>Google Meet</span>
+                </div>
+                <div class="quick-link-8 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://maps.google.com/"><img src="images/google-maps.png" alt=""></a></div>
+                 <span>Google maps</span>
+                </div>
+                <div class="quick-link-9 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://play.google.com/"><img src="images/google-play.png" alt=""></a></div>
+                 <span>Google play</span>
+                </div>
+                <div class="quick-link-10 quick-link-child">
+                 <div class="quick-link-logo-container"><a href="https://mail.google.com/"><img src="images/gmail.png" alt=""></a></div>
+                 <span>Gmail</span>
+                </div>
+             </div>
+ 
+            </div>
+           
+         </div>
+        </div>
+           
+
+        
+        
+        <script>
+            function checkEnter(event) {
+                if (event.keyCode === 13) { // 13 is the key code for Enter
+                    searchGoogle();
+                    return false; // Prevent form submission
+                }
+          
+               }
+            function searchGoogle(){
+                   
+                   const searchQuery = document.getElementById('searchInput').value;
+                   if(searchQuery!=""){
+                           // Construct the Google search URL
+                           const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+
+                           // Redirect the user to the Google search page
+                               window.location.href = googleSearchURL;
+                   }
+               
+                    return false;
+               }
+        </script>
+    </body>
+</html>
